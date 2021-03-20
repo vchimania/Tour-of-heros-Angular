@@ -1,0 +1,38 @@
+
+
+<!-- <nav>Tour of heroes<app-hero-search></app-hero-search></nav> -->
+<div id="hero">
+  <h1>Tour of Heroes</h1>
+  <app-hero-search style="margin-left: 180px; width: fit-content;"></app-hero-search>
+  <button class="btn btn-danger" style="margin-left: 300px;" (click)="logout()">LogOut</button>
+  </div>
+<div class="heroes-menu" >
+ 
+    <a *ngFor="let hero of heroes"
+    routerLink="/detail/{{hero.id}}">
+  
+    <!-- <div class="card-body" style="height: 200px;width: 200px;">
+      <img [src]="hero.image" alt="imgae" class="rounded-circle" >{{hero.name}}</div> -->
+
+      <img src={{hero.image}} alt={{hero.name}} class="rounded-circle" 
+      width="200" height="200" style="background-color:black">
+      <h3>{{hero.name}}</h3>
+  
+  
+    </a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <app-hero-search></app-hero-search> -->

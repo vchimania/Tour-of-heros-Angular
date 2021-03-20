@@ -1,0 +1,36 @@
+<div id="head">
+  <h1>Tour of Heroes</h1>
+  <!-- <app-hero-search style="margin-left: 180px;"></app-hero-search> -->
+  <button class="btn btn-danger" style="margin-left: 300px;" (click)="logout()">LogOut</button>
+  </div>
+<div class="card mb-3 container" style="max-width: 1500px; height:600px;">
+  <div class="row no-gutters">
+    <div class="col-md-5">
+      <!-- <img src="./assets/images/test.png" class="card-img" alt="..."> -->
+      <img src={{hero.image}} class="card-img" alt={{hero.name}}>
+    </div>
+    <div class="col-md-5">
+      <div class="card-body"  style="text-align:left; padding-top: 80px;">
+        <div *ngIf="hero">
+          <h2>{{hero.name | uppercase}} Details</h2>
+          <div><span>id: </span>{{hero.id}}</div>
+          <div>
+            <label for="hero-name">Hero name: </label>
+            <input id="hero-name" [(ngModel)]="hero.name" placeholder="Hero name"/>
+          </div>
+          <div class="desc"><span></span>{{hero.desc}}</div>
+          
+          <!-- <div><span>image: </span><img src='./assets/images/test.png' alt="Italian Trulli" width="200" height="200"/> -->
+          <!-- </div> -->
+          <!-- <div><span>image: </span>{{hero.image}}</div> -->
+          
+          <button (click)="goBack()" class="btn btn-dark mr-2">go back</button>
+          <button (click)="save()" style="padding: bottom 5px;" class="btn btn-dark">save</button>
+        </div>
+        <!-- <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+      </div>
+    </div>
+  </div>
+</div>
